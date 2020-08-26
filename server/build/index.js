@@ -19,6 +19,7 @@ class server {
         this.app.use(morgan_1.default('dev'));
         this.app.use(cors_1.default());
         this.app.use(express_1.default.json());
+        this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     routes() {
         this.app.use(indexroutes_1.default);
