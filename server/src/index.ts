@@ -4,7 +4,6 @@ import peliculasroutes from './routes/peliculasroutes';
 
 import morgan from 'morgan';
 import cors from 'cors';
-
 class server{
     public app:Application;
 
