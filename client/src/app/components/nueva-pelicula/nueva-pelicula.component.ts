@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pelicula } from 'src/app/models/peliculas';
+import { PeliculaService } from 'src/app/services/pelicula.service';
 
 @Component({
   selector: 'app-nueva-pelicula',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevaPeliculaComponent implements OnInit {
 
-  constructor() { }
+  peli:Pelicula={
+    titulo:'',
+    descripcion:'',
+    imagen:''
+  }
+  constructor(private pelicula:PeliculaService) { }
 
   ngOnInit() {
   }
 
+  saveNew(){
+    this.pelicula.newMovie(this.peli).subscribe(
+      res=>{
+        console.log(res);
+      },
+      err=>{
+        console.log(err);
+      }
+    );
+  }
 }
