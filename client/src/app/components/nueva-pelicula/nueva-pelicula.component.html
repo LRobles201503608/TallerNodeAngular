@@ -1,1 +1,22 @@
-<p>nueva-pelicula works!</p>
+<div class="row">
+  <div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input name="titulo" placeholder="Titulo" [(ngModel)]="fac.titulo" class="form-control"autofocus>
+                </div>
+                <div class="form-group">
+                      <input type="text" name="detail"  placeholder="Descripcion" [(ngModel)]="fac.descripcion" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="imagen"  placeholder="Imagen" [(ngModel)]="fac.imagen" class="form-control">
+                </div>
+                <button class="btn btn-success btn-block" (click)="saveNew()">
+                    Save
+                </button>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ListaPeliculasComponent } from './components/lista-peliculas/lista-peliculas.component';
 import { NuevaPeliculaComponent } from './components/nueva-pelicula/nueva-pelicula.component';
 
+import { FormsModule } from '@angular/forms'; //para aceptar ngModels
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,9 @@ import { NuevaPeliculaComponent } from './components/nueva-pelicula/nueva-pelicu
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
