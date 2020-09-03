@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Taller</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-title align="center">
+      Pelicula nueva
+    </ion-card-title>
+    <ion-card-content>
+      <ion-input placeholder="Nombre" name="titulo" [(ngModel)]="peliculas.titulo"></ion-input>
+      <ion-textarea placeholder="Descripcion" name="description" [(ngModel)]="peliculas.descripcion"></ion-textarea>
+      <ion-input placeholder="Imagen (Link)" name="image" [(ngModel)]="peliculas.imagen"></ion-input>
+      <ion-button (click)="send()">Enviar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

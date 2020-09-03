@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Taller</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div *ngFor="let a of variable2">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title align="center">
+          {{a.titulo}}
+        </ion-card-title>
+        <ion-button color="danger" (click)="delete(a.id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img [src]="a.imagen"></ion-img>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
